@@ -6,7 +6,7 @@ namespace sycs4
         int a,b,sum;
       std:: cout<<"Enter the number";
       std::cin>> a>>b;
-      std::cout<<"Sum of two numbers is"<<(a+b);
+      std::cout<<"Sum of two numbers is"<<(a-b);
         return 0;
     }
     int sub()
@@ -17,5 +17,4 @@ namespace sycs4
       std::cout<<"Sub of two numbers is"<<(a-b);
         return 0;
     }
-
 }
