@@ -5,11 +5,9 @@ class Complex {
        int real, imag;
     public:
        Complex(int r=0,int i=0):real(r),imag(i){}
-       Complex add(const Complex &c){
-        Complex T4;
-        T4.real=real+c.real;
-        T4.imag=imag+c.imag;
-        return T4;
+       void add(const Complex &c){
+        real=real+c.real;
+        imag=imag+c.imag;
        }
        Complex substract(const Complex&c){
         return Complex(real-c.real,imag-c.imag);
@@ -20,12 +18,12 @@ class Complex {
 };
 int main(){
     Complex c1(4,5),c2(8,9);
-    Complex sum=c1.add(c2);
+    c1.add(c2);
     Complex diff=c1.substract(c2);
 
     cout<<"First Complex Number: ";c1.display();
     cout<<"Second Complex Number: ";c2.display();
-    cout<<"Addition: ";sum.display();
+    cout<<"Addition: ";c1.display();
     cout<<"Substraction: ";diff.display();
     return 0;
 }
